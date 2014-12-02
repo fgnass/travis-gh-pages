@@ -1,4 +1,7 @@
 language: node_js
 node_js:
 - '0.10'
-script: ./deploy.sh
+script: "./deploy.sh"
+env:
+  global:
+    secure: GC7AKMaJIzl/4FSlFxj/fc1nuS3P5eREULf64kqH5xU7w83sxjqIGpGyPEUvBzSnIG9hC+74nPEWsa9luO88/SKjGtCsV9TB5ItwcZ/+vV/Xnj5tnNtQKe8kZLBLYq1aFj0d3qKfIg3Z05pZiYxf0vv9Plpjh5IQGU9zRywRjWU=

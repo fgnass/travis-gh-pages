@@ -1,8 +1,12 @@
 #!/bin/sh
 
-git clone . gh-pages
-cd gh-pages
-git checkout gh-pages
+rm -rf _site || exit 0
+mkdir _site
+cd _site
 date >> index.html
-git add . && git commit -m "Deployed to GitHub Pages"
+git init
+git config user.name "Travis-CI"
+git config user.email "travis@travis-ci.org"
+git add .
+git commit -m "Deployed to GitHub Pages"
 git push --force "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" > /dev/null 2>&1
